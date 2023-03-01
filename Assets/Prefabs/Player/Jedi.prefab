@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1494568436052652105, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: _name
+      value: Jedi
+      objectReference: {fileID: 0}
+    - target: {fileID: -1494568436052652105, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: _description
+      value: Start with the force and a blue saber
+      objectReference: {fileID: 0}
     - target: {fileID: 4281831700057352711, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: m_Sprite
       value: 

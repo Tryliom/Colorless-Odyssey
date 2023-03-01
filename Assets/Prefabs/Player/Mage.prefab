@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1494568436052652105, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: _description
-      value: blabla
+      value: Start with fire AOE and wood wand
       objectReference: {fileID: 0}
     - target: {fileID: 4281831700057352711, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: m_Sprite

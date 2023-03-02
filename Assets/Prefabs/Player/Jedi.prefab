@@ -15,6 +15,30 @@ PrefabInstance:
       propertyPath: _description
       value: Start with the force and a blue saber
       objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.31719458
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.13996884
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.002669908
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.17853676
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4281831700057352711, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -16,12 +16,28 @@ PrefabInstance:
       value: Start with Eating ability and his spit attack
       objectReference: {fileID: 0}
     - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.39548373
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.1652278
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.008644462
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.11732726
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
       value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.6
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4281831700057352711, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: m_Size.x

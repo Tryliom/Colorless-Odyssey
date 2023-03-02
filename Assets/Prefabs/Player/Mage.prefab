@@ -12,12 +12,32 @@ PrefabInstance:
       value: Mage
       objectReference: {fileID: 0}
     - target: {fileID: -1494568436052652105, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
-      propertyPath: _speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -1494568436052652105, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: _description
       value: Start with fire AOE and wood wand
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3075223
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.16173118
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0021662489
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.17007366
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4281831700057352711, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: m_Sprite

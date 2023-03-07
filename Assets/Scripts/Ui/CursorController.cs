@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CursorController : MonoBehaviour
 {
@@ -10,14 +11,14 @@ public class CursorController : MonoBehaviour
     [SerializeField] private GameObject _outsideCircleFill;
     [SerializeField] private GameObject _insideCircleFill;
     
-    private SpriteRenderer _outsideCircleFillSpriteRenderer;
-    private SpriteRenderer _insideCircleFillSpriteRenderer;
+    private Image _outsideCircleFillSpriteRenderer;
+    private Image _insideCircleFillSpriteRenderer;
 
     // Start is called before the first frame update
     void Start()
     {
-        _outsideCircleFillSpriteRenderer = _outsideCircleFill.GetComponent<SpriteRenderer>();
-        _insideCircleFillSpriteRenderer = _insideCircleFill.GetComponent<SpriteRenderer>();
+        _outsideCircleFillSpriteRenderer = _outsideCircleFill.GetComponent<Image>();
+        _insideCircleFillSpriteRenderer = _insideCircleFill.GetComponent<Image>();
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class CursorController : MonoBehaviour
         //TODO: Get if one of the weapons is ready to display inside circle
         
         // Update the position of the cursor to the mouse position
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePosition = Input.mousePosition;
         transform.position = mousePosition;
         
         Cursor.visible = false;

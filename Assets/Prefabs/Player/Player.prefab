@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1425637410799498642}
   - component: {fileID: -7315478509475722895}
   - component: {fileID: -1494568436052652105}
+  - component: {fileID: 7532396363362591176}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -244,3 +245,31 @@ MonoBehaviour:
   _name: 
   _description: 
   _speed: 3
+--- !u!114 &7532396363362591176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8591064264462940767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f919b872e7e1978439c226c5afedde1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _redHearts: 0
+  _blueHearts: 0
+  _greenHearts: 0
+  _speed: 0
+  _attackSpeedPercentage: 0
+  _damagePercentage: 0
+  _speedPercentage: 0
+  _projectileSpeedPercentage: 0
+  _projectileSizePercentage: 0
+  _projectileKnockbackPercentage: 0
+  _dashCharges: 0
+  _dashCooldownReductionPercentage: 0
+  _goldGainPercentage: 0
+  _homingShots: 0
+  _pierceShots: 0
+  Speed: 0

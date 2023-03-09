@@ -244,7 +244,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 
   _description: 
-  _speed: 3
 --- !u!114 &7532396363362591176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,16 +259,22 @@ MonoBehaviour:
   _redHearts: 0
   _blueHearts: 0
   _greenHearts: 0
-  _speed: 0
+  _speed: 3
+  _criticalChance: 0
+  _criticalDamage: 0
   _attackSpeedPercentage: 0
   _damagePercentage: 0
   _speedPercentage: 0
   _projectileSpeedPercentage: 0
   _projectileSizePercentage: 0
   _projectileKnockbackPercentage: 0
-  _dashCharges: 0
-  _dashCooldownReductionPercentage: 0
-  _goldGainPercentage: 0
+  _projectileNumber: 0
   _homingShots: 0
   _pierceShots: 0
-  Speed: 0
+  _dashCharges: 0
+  _dashCooldownReductionPercentage: 0
+  _aoeDamagePercentage: 0
+  _aoeRadiusPercentage: 0
+  _thunderboltDamagePercentage: 0
+  _thunderboltRadiusPercentage: 0
+  _goldGainPercentage: 0

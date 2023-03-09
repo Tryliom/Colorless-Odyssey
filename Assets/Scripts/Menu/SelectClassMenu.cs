@@ -21,7 +21,7 @@ public class SelectClassMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _runData.classType = null;
+        _runData.ClassType = null;
         _startButton.SetActive(false);
         _informationPanel.SetActive(false);
     }
@@ -29,9 +29,9 @@ public class SelectClassMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_runData.classType != null && (_lastClassType == null || _runData.classType != _lastClassType.gameObject))
+        if (_runData.ClassType != null && (_lastClassType == null || _runData.ClassType != _lastClassType.gameObject))
         {
-            _lastClassType = _runData.classType;
+            _lastClassType = _runData.ClassType;
             
             _startButton.SetActive(true);
             _informationPanel.SetActive(true);

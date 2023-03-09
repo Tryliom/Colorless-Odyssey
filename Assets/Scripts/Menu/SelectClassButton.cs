@@ -38,7 +38,7 @@ public class SelectClassButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_runData.classType != _classTypePrefab)
+        if (_runData.ClassType != _classTypePrefab)
         {
             _animator.SetBool(Running, false);
         }
@@ -46,7 +46,7 @@ public class SelectClassButton : MonoBehaviour
     
     public void OnClick()
     {
-        _runData.classType = _classTypePrefab;
+        _runData.ClassType = _classTypePrefab;
         
         _animator.SetBool(Running, true);
     }

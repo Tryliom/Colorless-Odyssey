@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1494568436052652105, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: _description
-      value: Start with fire AOE and wood wand
+      value: Start with fire AOE and magic wand
       objectReference: {fileID: 0}
     - target: {fileID: 242664471579241773, guid: 6890dc33c1c6c644b88bf6587c63ca9e, type: 3}
       propertyPath: m_Size.x

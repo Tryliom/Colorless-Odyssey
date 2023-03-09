@@ -8,6 +8,7 @@ public class PlayerInputController : MonoBehaviour
     public Vector2 moveValue;
     public bool attackValue;
     public bool specialAttackValue;
+    public bool dashValue;
     
     public void OnPlayerMove(InputValue context)
     {
@@ -22,5 +23,10 @@ public class PlayerInputController : MonoBehaviour
     public void OnPlayerSpecialAttack(InputValue context)
     {
         specialAttackValue = context.isPressed;
+    }
+    
+    public void OnPlayerDash(InputValue context)
+    {
+        dashValue = context.isPressed;
     }
 }

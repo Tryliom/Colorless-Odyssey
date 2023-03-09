@@ -16,7 +16,9 @@ GameObject:
   - component: {fileID: 4478813612376771613}
   - component: {fileID: 2014889739163805507}
   - component: {fileID: 1425637410799498642}
+  - component: {fileID: 990855467251093194}
   - component: {fileID: -7315478509475722895}
+  - component: {fileID: 5807267293452290739}
   - component: {fileID: -1494568436052652105}
   - component: {fileID: 7532396363362591176}
   - component: {fileID: 9222110447923182299}
@@ -206,6 +208,7 @@ MonoBehaviour:
   moveValue: {x: 0, y: 0}
   attackValue: 0
   specialAttackValue: 0
+  dashValue: 0
 --- !u!114 &1425637410799498642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +222,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runData: {fileID: 11400000, guid: d9ff218f464edee4f91a654a9c20037e, type: 2}
+--- !u!114 &990855467251093194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8591064264462940767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f9d4084d21d3d5469dedbc9c580df2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _runData: {fileID: 11400000, guid: d9ff218f464edee4f91a654a9c20037e, type: 2}
+  _dashSpeed: 15
+  _dashDuration: 0.2
+  _dashCooldown: 2
 --- !u!114 &-7315478509475722895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +248,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac1f05de690fc744d92e7150af554739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5807267293452290739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8591064264462940767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d959212b3b6491141bee1a1f96e1b609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &-1494568436052652105
@@ -272,7 +303,7 @@ MonoBehaviour:
   _projectileNumber: 0
   _homingShots: 0
   _pierceShots: 0
-  _dashCharges: 0
+  _dashCharges: 2
   _dashCooldownReductionPercentage: 0
   _aoeDamagePercentage: 0
   _aoeRadiusPercentage: 0

@@ -32,6 +32,8 @@ public class SelectClassButton : MonoBehaviour
         
         _animator = _classTypeSpawned.GetComponent<Animator>();
         _classTypeSpawned.GetComponent<MovementController>().enabled = false;
+        _classTypeSpawned.GetComponent<Dash>().enabled = false;
+        
         _classTypeSpawned.transform.localScale = new Vector3(2f, 2f, 2f);
     }
 

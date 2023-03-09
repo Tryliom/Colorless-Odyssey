@@ -13,7 +13,6 @@ public class RunData : ScriptableObject
     public void OnSetupRoom(GameObject player)
     {
         _classTypeStats = player.GetComponent<Stats>();
-        FinalStats = player.GetComponentInChildren<Stats>();
     }
 
     public void CompileStats()

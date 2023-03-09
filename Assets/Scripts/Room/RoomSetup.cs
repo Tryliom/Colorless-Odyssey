@@ -14,12 +14,13 @@ public class RoomSetup : MonoBehaviour
     {
         var player = Instantiate(_runData.ClassType, _playerSpawnPoint.position, Quaternion.identity);
         _cinemachineVirtualCamera.Follow = player.transform;
-
+        
+        _runData.OnSetupRoom(player);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        _runData.CompileStats();
     }
 }

@@ -6,7 +6,7 @@ public class AfterImage : MonoBehaviour
 {
     private SpriteRenderer _spriteRenderer;
     
-    private float _timeToLive = 0.15f;
+    private float _timeToLive = 0.1f;
     private float _timeSinceSpawn = 0f;
 
     // Start is called before the first frame update

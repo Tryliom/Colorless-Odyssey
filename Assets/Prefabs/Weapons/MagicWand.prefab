@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8451136570444822713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1857652356544585717, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857652356544585717, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1857652356544585717, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b30cb42708f83904b82c0ad53f24d4e8, type: 3}
+    - target: {fileID: 1857652356544585717, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079624519403020189, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247638670378054047, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_Name
+      value: MagicWand
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645509970998729159, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645509970998729159, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645509970998729159, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3b6e1711b9be2d442b1982db0c6d4cb4, type: 3}
+    - target: {fileID: 3645509970998729159, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _name
+      value: Magic wand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _homing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _maxDamage
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _minDamage
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _attackSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _description
+      value: A basic magic wand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _spreadAngle
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _projectileSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: 7477698313215548939, guid: d2d286ee34104d54ba69dce2f6ff6aa9, type: 3}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _projectileLifeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _awakenedDescription
+      value: Projectile pass through walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _projectileKnockback
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+      propertyPath: _spreadAnglePerProjectile
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+--- !u!1 &6366288627019385126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3247638670378054047, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
+  m_PrefabInstance: {fileID: 8451136570444822713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4272681526022867073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6366288627019385126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2eb741ef2cf55b4582bcf7e3dae4d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

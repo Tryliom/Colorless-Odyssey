@@ -48,7 +48,7 @@ public class SelectClassButton : MonoBehaviour
     
     public void OnClick()
     {
-        _runData.ClassType = _classTypePrefab;
+        _runData.SetClassType(_classTypePrefab);
         
         _animator.SetBool(Running, true);
     }

@@ -7,7 +7,7 @@ public class AfterImageGenerator : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     
     private float _timeSinceLastImage = 0f;
-    private float _timeBetweenImages = 0.025f;
+    private readonly float _timeBetweenImages = 0.025f;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,8 @@ public class AfterImageGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_spriteRenderer.sprite == null) return;
+        
         _timeSinceLastImage += Time.deltaTime;
         
         if (_timeSinceLastImage >= _timeBetweenImages && _spriteRenderer.sprite != null)

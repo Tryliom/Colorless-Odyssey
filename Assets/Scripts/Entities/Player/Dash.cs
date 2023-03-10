@@ -21,7 +21,6 @@ public class Dash : MonoBehaviour
     private float _maxCooldown = 0f;
     
     private int _maxDashCount = 1;
-    private int _currentDashCount = -1;
 
     private Vector2 _direction;
 
@@ -52,7 +51,7 @@ public class Dash : MonoBehaviour
             }
         }
         
-        if (_currentDashCount < _maxDashCount)
+        if (_runData.CurrentDashCount < _maxDashCount)
         {
             if (_cooldownTimer == 0)
             {
@@ -63,16 +62,16 @@ public class Dash : MonoBehaviour
             
             if (_cooldownTimer <= 0)
             {
-                _currentDashCount++;
+                _runData.CurrentDashCount++;
                 _cooldownTimer = 0;
             }
         }
         
-        if (_playerInputController.dashValue && _currentDashCount > 0 && _timer <= 0 && _playerInputController.moveValue != Vector2.zero)
+        if (_playerInputController.dashValue && _runData.CurrentDashCount > 0 && _timer <= 0 && _playerInputController.moveValue != Vector2.zero)
         {
             _direction = _playerInputController.moveValue;
             _timer = _dashDuration;
-            _currentDashCount--;
+            _runData.CurrentDashCount--;
             _afterImageGenerator.enabled = true;
         }
 
@@ -87,11 +86,6 @@ public class Dash : MonoBehaviour
         if (_maxCooldown < 0.2f)
         {
             _maxCooldown = 0.2f;
-        }
-
-        if (_currentDashCount == -1)
-        {
-            _currentDashCount = _maxDashCount;
         }
     }
 }

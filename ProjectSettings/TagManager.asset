@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Death
+  - PlayerAlly
+  - Enemy
+  - PlayerProjectile
+  - EnemyProjectile
+  - PlayerMeatShield
+  - EnemyMeatShield
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -41,6 +48,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Weapon
+    uniqueID: 1869928983
     locked: 0
   - name: Above
     uniqueID: 3985906825

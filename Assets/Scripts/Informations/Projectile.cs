@@ -18,11 +18,13 @@ public class Projectile : MonoBehaviour
     private float _timeAlive;
     
     private Rigidbody2D _rigidbody2D;
+    private PolygonCollider2D _polygonCollider2D;
     
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _polygonCollider2D = GetComponent<PolygonCollider2D>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,9 @@ public class Projectile : MonoBehaviour
     {
         _rigidbody2D.velocity = _velocity;
         
+        // Rotate projectile to face direction of travel
+        transform.up = _velocity;
+
         _timeAlive += Time.deltaTime;
         
         if (_timeAlive >= _lifetime)
@@ -63,6 +68,7 @@ public class Projectile : MonoBehaviour
         {
             if (_isBouncing)
             {
+                //TODO: Make it later
                 _velocity = Vector2.Reflect(_velocity, other.transform.up);
             }
             else
@@ -82,7 +88,7 @@ public class Projectile : MonoBehaviour
         _damage = damage;   
     }
 
-    public void SetLifetime(float lifetime)
+    public void SetLifeTime(float lifetime)
     {
         _lifetime = lifetime;
     }

@@ -113,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
       propertyPath: _spreadAngle
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
       propertyPath: _projectileSpeed
@@ -137,9 +137,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7001415926878144592, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
       propertyPath: _spreadAnglePerProjectile
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3457944134331512816, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5f9fb77dd71ca33438347d7bb2c43c73, type: 3}
 --- !u!1 &6366288627019385126 stripped
 GameObject:

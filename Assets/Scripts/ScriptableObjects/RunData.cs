@@ -23,9 +23,14 @@ public class WeaponData
 public class RunData : ScriptableObject
 {
     public GameObject ClassType;
+
+    // Stats section
     public Stats FinalStats;
-    
+    // Stats that are up by collecting items, etc.
+    public Stats AdditionalStats;
     private Stats _classTypeStats;
+    private Stats _leftWeaponStats;
+    private Stats _rightWeaponStats;
 
     public int CurrentDashCount { get; set; } = 0;
     
@@ -35,9 +40,40 @@ public class RunData : ScriptableObject
     
     public void OnSetupRoom(GameObject player)
     {
-        _classTypeStats = player.GetComponent<Stats>();
+        var weaponsController = player.GetComponent<WeaponsController>();
+        
+        if (LeftWeapon != null)
+        {
+            var weaponObject = Instantiate(LeftWeapon.Weapon, player.transform);
+            var weapon = weaponObject.GetComponent<Weapon>();
+            
+            weapon.ThemeColorsByLevel = LeftWeapon.WeaponLevels;
+            weapon.IsAwakened = LeftWeapon.IsAwakened;
+            weapon.SetupStats();
+            
+            weaponsController.SetLeftWeapon(weaponObject);
+            
+            _leftWeaponStats = weapon.OuterStats;
+        }
+        
+        if (RightWeapon != null)
+        {
+            var weaponObject = Instantiate(RightWeapon.Weapon, player.transform);
+            var weapon = weaponObject.GetComponent<Weapon>();
+
+            weapon.ThemeColorsByLevel = RightWeapon.WeaponLevels;
+            weapon.IsAwakened = RightWeapon.IsAwakened;
+            weapon.SetupStats();
+            
+            weaponsController.SetRightWeapon(weaponObject);
+            
+            _rightWeaponStats = weapon.OuterStats;
+        }
+
         FinalStats = new Stats();
         
+        _classTypeStats = player.GetComponent<Stats>();
+
         CompileStats();
         
         CurrentDashCount = FinalStats._dashCharges;
@@ -48,6 +84,17 @@ public class RunData : ScriptableObject
         FinalStats.ResetStats();
         
         FinalStats.AddStats(_classTypeStats);
+        FinalStats.AddStats(AdditionalStats);
+        
+        if (_leftWeaponStats != null)
+        {
+            FinalStats.AddStats(_leftWeaponStats);
+        }
+        
+        if (_rightWeaponStats != null)
+        {
+            FinalStats.AddStats(_rightWeaponStats);
+        }
     }
     
     public float GetSpeed()
@@ -79,6 +126,8 @@ public class RunData : ScriptableObject
             var weapon = startingWeapon.GetComponent<Weapon>();
             RightWeapon = new WeaponData(startingWeapon.gameObject, weapon.ThemeColorsByLevel, weapon.IsAwakened);
         }
+        
+        AdditionalStats = new Stats();
     }
     
     public void SwapWeapons()

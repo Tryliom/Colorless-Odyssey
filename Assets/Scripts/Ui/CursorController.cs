@@ -13,6 +13,8 @@ public class CursorController : MonoBehaviour
     
     private Image _outsideCircleFillSpriteRenderer;
     private Image _insideCircleFillSpriteRenderer;
+    
+    private WeaponsController _weaponsController;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +28,20 @@ public class CursorController : MonoBehaviour
     {
         //TODO: Get if the special ability is ready to display outside circle
         
-        //TODO: Get if one of the weapons is ready to display inside circle
+        if (_weaponsController != null)
+        {
+            _insideCircleFillSpriteRenderer.fillAmount = 1f - _weaponsController.GetWeaponCooldownPercentage();
+        }
         
         // Update the position of the cursor to the mouse position
         Vector2 mousePosition = Input.mousePosition;
         transform.position = mousePosition;
         
         Cursor.visible = false;
+    }
+    
+    public void SetWeaponsController(WeaponsController weaponsController)
+    {
+        _weaponsController = weaponsController;
     }
 }

@@ -275,6 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbb805ffcd2aed4e9b047015d29c140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _runData: {fileID: 11400000, guid: d9ff218f464edee4f91a654a9c20037e, type: 2}
+  _leftWeaponRadius: 0.4
+  _rightWeaponRadius: 0.6
 --- !u!114 &-1494568436052652105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 
   _description: 
+  _startingLeftWeapon: {fileID: 0}
+  _startingRightWeapon: {fileID: 0}
 --- !u!114 &7532396363362591176
 MonoBehaviour:
   m_ObjectHideFlags: 0

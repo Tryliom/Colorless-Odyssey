@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d2e25a678c467043a42f1ddc9864729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _runData: {fileID: 11400000, guid: d9ff218f464edee4f91a654a9c20037e, type: 2}
   _spritesPerLevel:
   - {fileID: 3645509970998729159}
   - {fileID: 1857652356544585717}
@@ -287,6 +288,7 @@ MonoBehaviour:
   _description: 
   _awakenedDescription: 
   _rarity: 0
+  _weaponType: 0
   _minDamage: 0
   _maxDamage: 0
   _attackSpeed: 0
@@ -299,6 +301,8 @@ MonoBehaviour:
   _spreadAnglePerProjectile: 0
   _homing: 0
   _passThrough: 0
+  _passThroughWall: 0
+  _bouncing: 0
 --- !u!1 &4041807075537452149
 GameObject:
   m_ObjectHideFlags: 0

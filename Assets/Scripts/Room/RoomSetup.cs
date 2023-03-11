@@ -8,12 +8,15 @@ public class RoomSetup : MonoBehaviour
     [SerializeField] private RunData _runData;
     [SerializeField] private Transform _playerSpawnPoint;
     [SerializeField] private CinemachineVirtualCamera _cinemachineVirtualCamera;
+    [SerializeField] private GameObject _cursor;
 
     // Start is called before the first frame update
     void Start()
     {
         var player = Instantiate(_runData.ClassType, _playerSpawnPoint.position, Quaternion.identity);
         _cinemachineVirtualCamera.Follow = player.transform;
+        
+        _cursor.GetComponent<CursorController>().SetWeaponsController(player.GetComponent<WeaponsController>());
         
         _runData.OnSetupRoom(player);
     }

@@ -53,6 +53,7 @@ MonoBehaviour:
   _runData: {fileID: 11400000, guid: d9ff218f464edee4f91a654a9c20037e, type: 2}
   _playerSpawnPoint: {fileID: 7681018519718770287}
   _cinemachineVirtualCamera: {fileID: 1380720982628320942}
+  _cursor: {fileID: 4028418737212462906}
 --- !u!1 &9170492171471560344
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a0cd24f774c54d4a9bdb23a7afdb091, type: 3}
+--- !u!1 &4028418737212462906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1662405357933782990, guid: 2a0cd24f774c54d4a9bdb23a7afdb091, type: 3}
+  m_PrefabInstance: {fileID: 2375048070628569332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6126553857676539838
 PrefabInstance:
   m_ObjectHideFlags: 0

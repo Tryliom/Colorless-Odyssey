@@ -31,17 +31,20 @@ public class AfterImageGenerator : MonoBehaviour
     
     private void GenerateAfterImage()
     {
-        var afterImage = new GameObject("AfterImage");
-        afterImage.transform.position = transform.position;
-        afterImage.transform.rotation = transform.rotation;
-        afterImage.transform.localScale = transform.localScale;
+        var imageDelayed = new GameObject("ImageDelayed");
+        imageDelayed.transform.position = transform.position;
+        imageDelayed.transform.rotation = transform.rotation;
+        imageDelayed.transform.localScale = transform.localScale;
         
-        var afterImageSpriteRenderer = afterImage.AddComponent<SpriteRenderer>();
+        var afterImageSpriteRenderer = imageDelayed.AddComponent<SpriteRenderer>();
         afterImageSpriteRenderer.sprite = _spriteRenderer.sprite;
         afterImageSpriteRenderer.sortingOrder = _spriteRenderer.sortingOrder - 1;
         afterImageSpriteRenderer.sortingLayerName = _spriteRenderer.sortingLayerName;
         afterImageSpriteRenderer.flipX = _spriteRenderer.flipX;
         
-        afterImage.AddComponent<AfterImage>();
+        var rb = imageDelayed.AddComponent<Rigidbody2D>();
+        rb.gravityScale = 0f;
+        
+        imageDelayed.AddComponent<ImageDelayed>();
     }
 }

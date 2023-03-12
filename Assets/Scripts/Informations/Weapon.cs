@@ -44,6 +44,12 @@ public class Weapon : MonoBehaviour
     [SerializeField] private bool _passThrough;
     [SerializeField] private bool _passThroughWall;
     [SerializeField] private bool _bouncing;
+    
+    [Header("Random shooting parameters")]
+    [SerializeField] private float _radiusOffset;
+    
+    [Header("Animator")]
+    [SerializeField] private float _animatorRadiusOffset;
 
     public List<ThemeColor> ThemeColorsByLevel { get; set; }
     public bool IsAwakened { get; set; }
@@ -76,8 +82,19 @@ public class Weapon : MonoBehaviour
     public bool PassThroughWall => _passThroughWall;
     public bool Bouncing => _bouncing;
     
+    public float AnimatorRadiusOffset { get => _animatorRadiusOffset; set => _animatorRadiusOffset = value; }
+    
     public Stats OuterStats { get; private set; }
+    
+    private Animator _animator;
+    
+    private static readonly int Shoot1 = Animator.StringToHash("Shoot");
 
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+    
     public void SetupStats()
     {
         ThemeColorsByLevel = new List<ThemeColor>();
@@ -94,9 +111,11 @@ public class Weapon : MonoBehaviour
     {
         onWeaponShootSubscribers.ForEach(subscriber => subscriber.Invoke());
         
+        _animator.SetTrigger(Shoot1);
+        
         for (var i = 0; i < GetProjectileNumber(); i++)
         {
-            var position = _projectileSpawnPoint.transform.position + new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), 0);
+            var position = _projectileSpawnPoint.transform.position + new Vector3(Random.Range(-_radiusOffset, _radiusOffset), Random.Range(-_radiusOffset, _radiusOffset), 0);
             var direction = (targetPosition - (Vector2) position).normalized;
             var totalSpreadAngle = _spreadAngle + _spreadAnglePerProjectile * (GetProjectileNumber() - 1);
             direction = Quaternion.Euler(0, 0, Random.Range(- totalSpreadAngle / 2, totalSpreadAngle / 2)) * direction;

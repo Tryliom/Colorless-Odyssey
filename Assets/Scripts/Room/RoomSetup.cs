@@ -9,6 +9,7 @@ public class RoomSetup : MonoBehaviour
     [SerializeField] private Transform _playerSpawnPoint;
     [SerializeField] private CinemachineVirtualCamera _cinemachineVirtualCamera;
     [SerializeField] private GameObject _cursor;
+    [SerializeField] private GameObject _cloudGenerator;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class RoomSetup : MonoBehaviour
         _cursor.GetComponent<CursorController>().SetWeaponsController(player.GetComponent<WeaponsController>());
         
         _runData.OnSetupRoom(player);
+        _runData.CloudGenerator = _cloudGenerator.GetComponent<CloudGenerator>();
     }
 
     // Update is called once per frame

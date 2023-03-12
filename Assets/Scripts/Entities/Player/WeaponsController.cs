@@ -19,7 +19,7 @@ public class WeaponsController : MonoBehaviour
     
     private float _leftCooldownTimer = 0f;
     private float _rightCooldownTimer = 0f;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +38,7 @@ public class WeaponsController : MonoBehaviour
             var directionFromAngle = Quaternion.AngleAxis(angle, Vector3.forward) * Vector3.right;
 
             // Set position according to the angle and radius not the direction
-            _leftWeapon.transform.position = playerPosition + directionFromAngle * _leftWeaponRadius;
+            _leftWeapon.transform.position = playerPosition + directionFromAngle * (_leftWeaponRadius + _leftWeaponScript.AnimatorRadiusOffset);
             _leftWeapon.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             
             // If oriented to the left, flip the sprite
@@ -46,7 +46,7 @@ public class WeaponsController : MonoBehaviour
 
             if (CanUseRightWeapon())
             {
-                _rightWeapon.transform.position = playerPosition + directionFromAngle * _rightWeaponRadius;
+                _rightWeapon.transform.position = playerPosition + directionFromAngle * (_rightWeaponRadius + _rightWeaponScript.AnimatorRadiusOffset);
                 _rightWeapon.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 
                 // If oriented to the left, flip the sprite
@@ -66,16 +66,22 @@ public class WeaponsController : MonoBehaviour
         
         if (_playerInputController.attackValue)
         {
+            // There is a small time between use of the left and right weapon to make it feel more natural
             if (CanUseLeftWeapon() && _leftCooldownTimer <= 0f)
             {
                 _leftWeaponScript.Shoot(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 _leftCooldownTimer = _leftWeaponScript.GetCooldown();
-            }
-            
-            if (CanUseRightWeapon() && _rightCooldownTimer <= 0f)
+                
+                // Summon cloud explosion effect
+                _runData.CloudGenerator.SpawnCloud(CloudMovementType.SimpleExplosion, _leftWeapon.transform.position, Vector3.zero, 0.2f, 100f, -0.5f, 0.3f);
+            } 
+            else if (CanUseRightWeapon() && _rightCooldownTimer <= 0f)
             {
                 _rightWeaponScript.Shoot(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 _rightCooldownTimer = _rightWeaponScript.GetCooldown();
+                
+                // Summon cloud explosion effect
+                _runData.CloudGenerator.SpawnCloud(CloudMovementType.SimpleExplosion, _rightWeapon.transform.position, Vector3.zero, 0.2f, 100f, -0.5f, 0.3f);
             }   
         }
     }

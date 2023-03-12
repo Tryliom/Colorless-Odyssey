@@ -23,6 +23,7 @@ public class WeaponData
 public class RunData : ScriptableObject
 {
     public GameObject ClassType;
+    public CloudGenerator CloudGenerator;
 
     // Stats section
     public Stats FinalStats;

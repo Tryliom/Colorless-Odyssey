@@ -83,8 +83,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1285385913
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -223,6 +223,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runData: {fileID: 11400000, guid: d9ff218f464edee4f91a654a9c20037e, type: 2}
+  _cloudSpawnRate: 0.25
+  _cloudLifetime: 0.3
+  _cloudRotationSpeed: 100
 --- !u!114 &990855467251093194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +281,8 @@ MonoBehaviour:
   _runData: {fileID: 11400000, guid: d9ff218f464edee4f91a654a9c20037e, type: 2}
   _leftWeaponRadius: 0.4
   _rightWeaponRadius: 0.6
+  LeftRadiusOffset: 0
+  RightRadiusOffset: 0
 --- !u!114 &-1494568436052652105
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class CloudGenerator : MonoBehaviour
 {
     [SerializeField] private List<Sprite> _cloudSprites;
     
-    public void SpawnCloud(CloudMovementType cloudMovementType, Vector3 position, Vector3 velocity, float lifetime, float rotationSpeed = 0f, float scaleDifference = 0f, float alphaFade = 1f)
+    public void SpawnCloud(CloudMovementType cloudMovementType, Vector3 position, Vector3 velocity, float lifetime, float rotationSpeed = 0f, float scaleDifference = 0f, float alphaFade = 1f, Color color = default)
     {
         if (cloudMovementType == CloudMovementType.BigExplosion)
         {
@@ -20,9 +20,9 @@ public class CloudGenerator : MonoBehaviour
             {
                 var angle = i * 15f;
                 var direction = Quaternion.Euler(0, 0, angle) * Vector3.right;
-                CreateCloud(position, direction * 0.5f, lifetime, rotationSpeed, scaleDifference);
-                CreateCloud(position, direction * 1f, lifetime, rotationSpeed, scaleDifference);
-                CreateCloud(position, direction * 1.5f, lifetime, rotationSpeed, scaleDifference);
+                CreateCloud(position, direction * 0.5f, lifetime, rotationSpeed, scaleDifference, alphaFade, color);
+                CreateCloud(position, direction * 1f, lifetime, rotationSpeed, scaleDifference, alphaFade, color);
+                CreateCloud(position, direction * 1.5f, lifetime, rotationSpeed, scaleDifference, alphaFade, color);
             }
         }
         else if (cloudMovementType == CloudMovementType.SimpleExplosion)
@@ -39,25 +39,26 @@ public class CloudGenerator : MonoBehaviour
                     rotationSpeed, 
                     scaleDifference * Random.Range(0.5f, 1.5f), 
                     alphaFade,
+                    color,
                     "Above"
                 );
             }
         }
         else if (cloudMovementType == CloudMovementType.Static)
         {
-            CreateCloud(position, Vector3.zero, lifetime, rotationSpeed, scaleDifference);
+            CreateCloud(position, Vector3.zero, lifetime, rotationSpeed, scaleDifference, alphaFade, color);
         }
         else if (cloudMovementType == CloudMovementType.Random)
         {
-            CreateCloud(position, new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0f), lifetime, rotationSpeed, scaleDifference);
+            CreateCloud(position, new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0f), lifetime, rotationSpeed, scaleDifference, alphaFade, color);
         }
         else if (cloudMovementType == CloudMovementType.Velocity)
         {
-            CreateCloud(position, velocity, lifetime, rotationSpeed, scaleDifference);
+            CreateCloud(position, velocity, lifetime, rotationSpeed, scaleDifference, alphaFade, color);
         }
     }
 
-    private void CreateCloud(Vector3 position, Vector3 velocity, float lifetime = 0.1f, float rotationSpeed = 0f, float scaleDifference = 0f, float alphaFade = 1f, string layer = "Default")
+    private void CreateCloud(Vector3 position, Vector3 velocity, float lifetime = 0.1f, float rotationSpeed = 0f, float scaleDifference = 0f, float alphaFade = 1f, Color color = default, string layer = "Default")
     {
         var imageDelayed = new GameObject("ImageDelayed");
         imageDelayed.transform.position = position;
@@ -66,6 +67,11 @@ public class CloudGenerator : MonoBehaviour
         afterImageSpriteRenderer.sprite = _cloudSprites[Random.Range(0, _cloudSprites.Count)];
         afterImageSpriteRenderer.sortingOrder = 0;
         afterImageSpriteRenderer.sortingLayerName = layer;
+        
+        if (color != default)
+        {
+            afterImageSpriteRenderer.color = color;
+        }
 
         var rb = imageDelayed.AddComponent<Rigidbody2D>();
         rb.gravityScale = 0f;

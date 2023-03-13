@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private RunData _runData;
+    [SerializeField] private bool _spawnClouds;
+    [SerializeField] private Color _cloudColor;
+
+    private const float CloudSpawnRate = 0.1f;
+    private float _cloudTimer;
+    
     private float _damage;
     private float _lifetime;
     private float _knockback;
@@ -36,10 +43,23 @@ public class Projectile : MonoBehaviour
         transform.up = _velocity;
 
         _timeAlive += Time.deltaTime;
-        
+
         if (_timeAlive >= _lifetime)
         {
-            Destroy(gameObject);
+            DestroyProjectile();
+        }
+        
+        if (_spawnClouds)
+        {
+            _cloudTimer -= Time.deltaTime;
+            
+            if (_cloudTimer <= 0)
+            {
+                _runData.CloudGenerator.SpawnCloud(CloudMovementType.Random, 
+                    transform.position + new Vector3(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f), 0),
+                    Vector3.zero, 0.3f, 100f, 0.5f, 0.5f, _cloudColor);
+                _cloudTimer = CloudSpawnRate;
+            }
         }
     }
     
@@ -51,7 +71,7 @@ public class Projectile : MonoBehaviour
             
             if (!_passThrough)
             {
-                Destroy(gameObject);
+                DestroyProjectile();
             }
         }
         else if (other.gameObject.CompareTag("Player") && gameObject.CompareTag("EnemyProjectile"))
@@ -60,7 +80,7 @@ public class Projectile : MonoBehaviour
             
             if (!_passThrough)
             {
-                Destroy(gameObject);
+                DestroyProjectile();
             }
         }
         
@@ -73,9 +93,16 @@ public class Projectile : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                DestroyProjectile();
             }
         }
+    }
+
+    public void DestroyProjectile()
+    {
+        _runData.CloudGenerator.SpawnCloud(CloudMovementType.SimpleExplosion, transform.position, Vector3.zero, 0.2f, 100f, -0.5f, 0.3f, _cloudColor);
+            
+        Destroy(gameObject);
     }
     
     public void SetTag(string tag)

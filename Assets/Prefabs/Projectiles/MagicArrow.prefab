@@ -11,6 +11,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagicArrow
       objectReference: {fileID: 0}
+    - target: {fileID: 3640582644958243215, guid: 0cac53562f61eb749b62288587bc0e11, type: 3}
+      propertyPath: _spawnClouds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3640582644958243215, guid: 0cac53562f61eb749b62288587bc0e11, type: 3}
+      propertyPath: _cloudColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3640582644958243215, guid: 0cac53562f61eb749b62288587bc0e11, type: 3}
+      propertyPath: _cloudColor.b
+      value: 0.7735849
+      objectReference: {fileID: 0}
+    - target: {fileID: 3640582644958243215, guid: 0cac53562f61eb749b62288587bc0e11, type: 3}
+      propertyPath: _cloudColor.g
+      value: 0.6713761
+      objectReference: {fileID: 0}
+    - target: {fileID: 3640582644958243215, guid: 0cac53562f61eb749b62288587bc0e11, type: 3}
+      propertyPath: _cloudColor.r
+      value: 0.105820596
+      objectReference: {fileID: 0}
     - target: {fileID: 4480056310507660137, guid: 0cac53562f61eb749b62288587bc0e11, type: 3}
       propertyPath: m_IsTrigger
       value: 1

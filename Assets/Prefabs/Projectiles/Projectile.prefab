@@ -150,3 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84d15831bcfcdf7468362935bf854b52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _runData: {fileID: 11400000, guid: d9ff218f464edee4f91a654a9c20037e, type: 2}
+  _spawnClouds: 0
+  _cloudColor: {r: 0, g: 0, b: 0, a: 0}
